@@ -199,8 +199,9 @@ p {
 .text {
 	color: #e2b344;
 	vertical-align: bottom;
-	font-family: 'Berkshire Swash', cursive;
+	font-family: 'Cookie', cursive;
 	font-size: x-large;
+	line-height: 25px;
 
 }
 .border {
