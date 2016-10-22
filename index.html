@@ -40,7 +40,7 @@
 	<body>
 
 	<!-- Navbar start -->
-		<div class="container">
+		<div class="container, navcolor">
 			<div class="row">
 				<div class=".col-xs-6 .col-sm-4">
 					<h1 id="logo">LCreme Pastries</h1>
@@ -57,20 +57,19 @@
 		</div>
 		
 	<!-- Navbar end -->
-		<div class="container">
-			<div class="row">
-					<img id="banner" src="img/cake4.png">
-					 <!-- Free image downloaded from www.unsplash.com -->
-				</div>
-			</div>
+		
 		<a name="contact"></a>
-		<div class="container">
+		<div class="container, bg">
+		<img id="banner" src="img/cake4.png">
 			<div class="row">
+			<!-- Free image downloaded from www.unsplash.com -->
+			
 				<div class="col-md-8">
 					<div class="contact">
+							<button id="contactUs" href="#contact">Contact us</button><br />
+							<img class="calig" src="img/caligraphy.jpg">
 							<h2><b>Location</b></h2>
 							<p>San Diego, CA 92154</p>
-							<h2><b>Contact us</b><br /></h2>
 							<p>Phone: (111)111-1111</p>
 							<h2><b>Hours</b><br /></h2>
 							<p>Monday - Friday 8am - 8pm</p>
@@ -83,50 +82,54 @@
 				<div class="col-md-4"><img id="coupon" src="img/coupon.jpg"></div>
 			</div>
 		</div>
-		<div id="owl-example" class="owl-carousel">
+		<hr id="hrule" >
+		<div id="owl-example" class="owl-carousel, modal">
+
 			<div class="item">
-				<img src="img/cake2.jpg" alt="Specialty Cake" width="400px" height="400px">
+				<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+				<img class="modal-content" src="img/cake2.jpg" alt="Specialty Cake" width="400px" height="400px">
 				<div class="captions">
 					<h3>Specialty Cakes</h3>
 				</div>
 			</div>
 			
 			<div class="item">
-				<img src="img/cookies.jpg" alt="Cookies" width="400px" height="400px">
+				<img class="modal-content" src="img/cookies.jpg" alt="Cookies" width="400px" height="400px">
 				<div class="captions">
 					<h3>Cookies</h3>
 				</div>
 			</div>
 			<div class="item">
-				<img src="img/cakepop.jpg" alt="Cake Pops" width="400px" height="400px">
+				<img class="modal-content" src="img/cakepop.jpg" alt="Cake Pops" width="400px" height="400px">
 				<div class="captions">
 					<h3>Cake Pops</h3>
 				</div>
 			</div>
 			<div class="item">
-				<img src="img/cheesecake.jpg" alt="Cheesecakes" width="400px" height="400px">
+				<img class="modal-content" src="img/cheesecake.jpg" alt="Cheesecakes" width="400px" height="400px">
 				<div class="captions">
 					<h3>Cheesecakes</h3>
 				</div>
 			</div>
 			<div class="item">
-				<img src="img/cupcake2.jpg" alt="Cupcakes" width="400px" height="400px">
+				<img class="modal-content" src="img/cupcake2.jpg" alt="Cupcakes" width="400px" height="400px">
 				<div class="captions">
 					<h3>Cupcakes</h3>
 				</div>
 			</div>
 			<div class="item">
-				<img src="img/pie.jpg" alt="Pies" width="500px" height="400px">
+				<img class="modal-content" src="img/pie.jpg" alt="Pies" width="500px" height="400px">
 				<div class="captions">
 					<h3>Pies</h3>
 				</div>
 			</div>
 		</div>
+
 		<div class="stylishContainer">
 			<div class="container, transparent">
 				<div class="row">
 					<div class="col-md-4"><iframe id="map" src="https://www.google.com/maps/d/embed?mid=1nSiwSWPlB4PhFHpsFBOqk6e0wYs&hl=en" width="540" height="360"></iframe><br /></div>
-					<div class="col-md-4"><span class="text"><h2>Location</h2>Awesome Bakery <br />San Diego, CA 92154<br /></span><span class="text"><br /><h2>Contact us</h2>We hope to hear from you soon! <br />(111) 111-1111</span></div>
+					<div class="col-md-4"><span class="text"><h2>Location</h2>Awesome Bakery <br />San Diego, CA 92154<br /></span><span class="text"><br /> <h2>Contact us</h2>We hope to hear from you soon! <br />(111) 111-1111</span></div>
 					<div class="col-md-4">
 
 					<span class="text"><h2>Hours</h2>Monday - Friday 8am - 8pm<br />Saturday 8am - 7pm<br />Sunday 8am - 6pm<br /><br /><p style="color: #e2b344;">Follow us on: </p><a href="https://www.facebook.com/Lcreme-cakes-143263532369181/?fref=ts"></span><i style="font-size: 35px;" class="fa fa-facebook-official" aria-hidden="true"></i></a></div>
@@ -141,7 +144,18 @@
 		$(document).ready(function() {
  
 	 $("#owl-example").owlCarousel();
-	
+	 var modal = document.getElementById('owl-example');
+	var img = document.getElementsByClassName('modal-content');
+	var modalImg = document.getElementsByClassName("modal-content");
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+	}
+	var span = document.getElementsByClassName("close")[0]
+	span.onclick = function() { 
+ 	modal.style.display = "none";
+	}
 	});
 	</script>
 	</body>

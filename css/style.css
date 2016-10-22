@@ -10,6 +10,12 @@ body {
 	width: 100%;
 
 }
+.navcolor {
+	background: rgba(255,255,255,.8);
+
+
+	width: 100%;
+}
 #navi ul{
 	font-size: auto;
 	text-align: center;
@@ -32,6 +38,9 @@ body {
 	font-weight: bold;
 	font-family: arial;
 	font-style: normal;
+	position:fixed;
+	top:0px;
+	z-index:999;
 	
 }
 .nav>li>a {
@@ -42,10 +51,10 @@ body {
 	display: inline-block;
 }
 #banner {
-	
+	background-attachment: fixed;
 	width: 100%;
 	display: inline;
-	max-height: 860px;
+	max-height: 960px;
 }
 #motto{
 	z-index: 5;
@@ -71,6 +80,7 @@ body {
 
 }
 .row {
+	max-width: 100%;
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
 	}
@@ -83,8 +93,17 @@ p {
 	
 	font-size: 20px;
 }
+#hrule {
+	width: 90%;
+	color: #7b564e;
+	 height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
 .contact {
-
+	padding: 10px;
 	background-color: white;
 	list-style-type: none;	
 	color: black;
@@ -101,6 +120,25 @@ p {
 	float: left;
 
 	
+}
+
+#contactUs {
+	background-color: #425454;
+	color: white;
+	padding: 15px;
+	border: 0;
+	font-size: 25px;
+}
+#contactUs:hover{
+	background-color: #55897d;
+	color: white;
+	padding: 15px;
+	border: 0;
+	font-size: 25px;
+}
+.calig {
+	width: 350px;
+	height: 100px;
 }
 #coupon {
 	margin-bottom: 15px;
@@ -213,9 +251,62 @@ p {
 .exampleImg {
 	width: 100%;
 	height: 400px;
-	max-width: 500px;
+	max-width: 600px;
 	padding: 25px;
+	transition: 0.3s;
 
+}
+.modal {
+	display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+   
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+}
+.modal-content {
+	margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
 .item {
 	font-family: 'Aclonica', sans-serif;
