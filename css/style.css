@@ -50,11 +50,11 @@ body {
 	float: left;
 	display: inline-block;
 }
-#banner {
+.banner {
 	background-attachment: fixed;
 	width: 100%;
 	display: inline;
-	max-height: 960px;
+	max-height: 800px;
 }
 #motto{
 	z-index: 5;
@@ -66,6 +66,9 @@ body {
 	font-family: "raleway", sans-serif;
 	font-weight: bold;
 	font-size: 15px;
+}
+#aboutme{
+	font-size: 55px;
 }
 #logo {
 
@@ -85,7 +88,6 @@ body {
 	font-family: 'Oswald', sans-serif;
 	}
 h3 {
-	font-size: 1em;
 	text-align: center;
 	font-weight: bold;
 }
@@ -174,16 +176,7 @@ p {
 	position: relative;
 }
 
-.sample {
 
-	font-size: auto;
-	display: inline-block;
-	line-height: 80px;
-	font-family: 'Lalezar', cursive;
-	text-align: center;
-	list-style-type: none;
-
-}
 #footer {
 	background-color: #0f0f0f;
 	list-style-type: none;	
@@ -249,10 +242,10 @@ p {
     width: 100%;
 }
 .exampleImg {
-	width: 100%;
+	padding: 25px;
 	height: 400px;
 	max-width: 600px;
-	padding: 25px;
+	
 	transition: 0.3s;
 
 }
@@ -271,8 +264,8 @@ p {
 .modal-content {
 
     display: block;
-    width: 80%;
-    max-width: 700px;
+  
+    max-width: 400px;
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -318,7 +311,7 @@ p {
     
     max-height: 425px;
     max-width: 460px;
-    margin: auto;
+  
 
 
 }
