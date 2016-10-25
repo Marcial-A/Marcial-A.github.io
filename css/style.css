@@ -11,9 +11,8 @@ body {
 
 }
 .navcolor {
-	background: rgba(255,255,255,.8);
 
-
+	background: white;  
 	width: 100%;
 }
 #navi ul{
@@ -29,9 +28,12 @@ body {
 	margin: auto;
 	display: inline-block;
 }
+.navbar {
+	background: rgba(255, 255, 255, 255, .5); 
+}
 .navbar-default {
 	display: inline-block;
-	background-color: transparent;
+	
 }
 .navbar-default a{
 	font-size: auto;
@@ -50,6 +52,7 @@ body {
 	float: left;
 	display: inline-block;
 }
+
 .banner {
 	background-attachment: fixed;
 	width: 100%;
@@ -68,10 +71,42 @@ body {
 	font-size: 15px;
 }
 #aboutme{
-	font-size: 55px;
+	font-size: 45px;
+	color: black;
+}
+#contactform {
+  	width: 100%;
+}
+
+.contactContainer {
+
+	background: rgba(0, 0, 0, 0.4); 
+
+
+	padding: 25px;
+}
+#name, #phone, #email, #message {
+
+	background: rgba(0, 0, 0, 0.9); 
+	border: none;
+    outline: none;
+    color: grey;
+    padding: 7px;
+    margin: 5px;
+    font-style: italic;
+}
+#button {
+	background: black;
+	border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+}
+#button:hover {
+	background: grey;
 }
 #logo {
-
+	background: white; 
 	font-family: 'Alex Brush', cursive;
 	font-weight: bold;
 	font-size: 45px;
@@ -125,7 +160,7 @@ p {
 }
 
 #contactUs {
-	background-color: #425454;
+	background-color: white;
 	color: white;
 	padding: 15px;
 	border: 0;
@@ -209,10 +244,7 @@ p {
     max-width: 90%;
 
 }
-#phone {
-	margin-top: 2%;
-	max-width: 100%;
-}
+
 #hours {
 	margin-top: 2%;
     max-width: 540px;
