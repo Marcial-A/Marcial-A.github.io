@@ -76,7 +76,7 @@ body {
 }
 #aboutsection {
 	display: inline-block;
-	float: left;
+
 	width: 50%;
 }
 #clientsection {
@@ -126,6 +126,9 @@ body {
 	
 
 }
+.containerHeight {
+	min-height: 500px;
+}
 .row {
 	
 	max-width: 100%;
@@ -134,7 +137,7 @@ body {
 	}
 h3 {
 	text-align: center;
-	font-weight: bold;
+	width: 100%;
 }
 p {
 	
