@@ -369,3 +369,26 @@ p {
 	cursor: grab;
 	cursor: -webkit-grab;
 }
+#aboutUs {
+	width: 100%;
+	min-height: 500px;
+	max-height: 500px;
+	background-image: url('../img/about.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 10% 50%;
+	
+}
+#aboutUs h1{
+	color: white;
+	position: absolute;
+	top: 50%;
+	right: 30%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 5px;
+}
+#about {
+	min-height: 250px;
+}
