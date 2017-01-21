@@ -392,3 +392,30 @@ p {
 #about {
 	min-height: 250px;
 }
+#aboutImg img{
+	max-height: 500px;
+	max-width: 620px;
+	border-radius: 8px;
+}
+#contactbg h2{
+	background-color: rgba(0,0,0.0.5);
+	min-height: 10px;
+}
+#services {
+	background-image: url('../img/services.png');
+	min-height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 10%;
+
+
+}
+#services h2 {
+	color: white;
+	position: absolute;
+	top: 50%;
+	right: 30%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+	border-radius: 5px;
+}
