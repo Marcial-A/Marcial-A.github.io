@@ -403,6 +403,7 @@ p {
 	max-height: 500px;
 	max-width: 620px;
 	border-radius: 8px;
+	max-width: 100%;
 }
 #contactbg h2{
 	background-color: rgba(0,0,0.0.5);
@@ -438,5 +439,6 @@ p {
 	border-radius: 8px;
 	max-width: 400px;
 	max-height: 500px;
+	max-width: 100%;
 
 }
