@@ -431,3 +431,12 @@ p {
 	max-width: 500px;
 	border-radius: 8px;
 }
+.imageGallery img{
+	margin: 5px;
+	margin-bottom: 10px;
+	padding: 2px;
+	border-radius: 8px;
+	max-width: 400px;
+	max-height: 500px;
+
+}
