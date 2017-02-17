@@ -10,9 +10,7 @@ body {
  p > h2 {
 	font-size: x-large;
 }
-li a{
-	min-height: 50px;
-}
+
 #main {
 	width: 100%;
 
@@ -39,9 +37,13 @@ li a{
 	margin-right: 2px;
 }
 .navbar {
+	font-size: medium;
+	text-align:center;
 	background: rgba(255, 255, 255, 255, .5);
-	width: 365px; 
-	min-height: 30px;
+	width: 355px; 
+	min-height: 50px;
+	border-width: 0px;
+	margin-bottom: 0px;
 }
 .navbar-default {
 	display: inline-block;
@@ -59,9 +61,10 @@ li a{
 	
 }
 .nav>li>a {
-	padding: 5px 1px;
+	padding: 2px 1px;
 	padding-left: 2px;
 	margin: 2px;
+	min-height: 50px;
 }
 .col-xs-6 {
 	float: left;
@@ -163,7 +166,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75706f', end
 	min-height: 500px;
 }
 .row {
-	font-size: larger;
 	max-width: 100%;
 	text-align: center;
 	font-family: 'Cookie', cursive;
