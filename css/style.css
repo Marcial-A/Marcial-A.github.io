@@ -37,6 +37,7 @@ body {
 	margin-right: 2px;
 }
 .navbar {
+	margin-left: 4%;
 	font-size: medium;
 	text-align:center;
 	background: rgba(255, 255, 255, 255, .5);
@@ -299,7 +300,7 @@ p {
 	width: 100%;
 }
 #map {
-	
+	margin-left: 4%;
 	margin-top: 2%;
     max-width: 100%;
 
