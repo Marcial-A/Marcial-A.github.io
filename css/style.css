@@ -107,10 +107,21 @@ body {
 #contactform {
   	width: 100%;
 }
-
+#contactImg {
+	z-index: -1;
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
 .contactContainer {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
 	/*
-	background-image: url('../img/gallery.jpg');
+	background-image: url('../img/contactform.jpg');
 
 	background-repeat: no-repeat;
 	background-size: cover;
