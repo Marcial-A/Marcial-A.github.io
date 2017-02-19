@@ -48,6 +48,7 @@ body {
 }
 .navbar-default {
 	display: inline-block;
+	background-color: white;
 	
 }
 .navbar-default a{
