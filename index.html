@@ -116,7 +116,7 @@
 				</div>
 			</div>
 		</div>
-
+		<a href="#" class="scrollToTop">^Scroll To Top^</a>
 		<div class="stylishContainer">
 			<div class="container transparent">
 				<div class="row">
@@ -154,6 +154,20 @@
 		<script src="js/script.js"></script>
 		<script>
 		$(document).ready(function() {
+
+			$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+	
+	//Click event to scroll to top
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
  
 	 $("#owl-example").owlCarousel();
 	 var modal = document.getElementById('owl-example');
