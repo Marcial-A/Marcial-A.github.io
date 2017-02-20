@@ -449,18 +449,7 @@ p {
 	min-height: 250px;
 	font-size: auto;
 }
-.scrollToTop {
 
-	text-align: center;
-	font-weight: bold;
-	
-	position: fixed;
-	right: 50px;
-	left: 0;
-	bottom: 15px;
-	color: white;
-	display: none;
-}
 #aboutImg img{
 	max-height: 500px;
 	max-width: 620px;
