@@ -531,3 +531,49 @@ p {
 .ee {
 	margin-right: 10px;
 }
+.carousel-wrapper{
+    
+    margin: auto;
+    width: 500px;
+}
+.carousel-captions{
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 290px;
+    left: 0px;
+    right: 0px;
+    font-size: 200%;
+}
+.carousel-slider{
+    width: 500px;
+    overflow: hidden;
+    
+}
+.carousel-slider ul{
+    width: 500px;
+    left: 0px;
+   list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slider ul li{
+    float: left;
+    margin-top: 25px;
+}
+.carousel-arrows #left{
+    position: relative;
+    float: left;
+    bottom: 290px;
+}
+.carousel-arrows #right{
+    position: relative;
+    float: right;
+    bottom: 290px;
+}
+#left, #right {
+    border: none;
+    height: auto;
+}

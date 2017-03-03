@@ -16,9 +16,8 @@
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 		<!-- Scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-		<script src="js/main.js" type="text/javascript"></script>
-		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
@@ -48,26 +47,24 @@
 	</div>
 	
 	<div class="row">
-
-	<div class="imageGallery">
-		<h1>[Gallery: Past Work]</h1>
-		<div class="col-md-12">
-			<img src="img/gallery/img1.png">
-		</div>
-		<div class="col-sm-4">
-			<img src="img/gallery/img2.png">
-		</div>
-
-		<div class="col-sm-4">
-			<img src="img/gallery/img3.png">
-		</div>
-			
-		<div class="col-sm-4">
-			<img src="img/gallery/img4.png">
-		</div>
-	</div>
-
-	</div>
+    <div class="col-md-12">
+	<div class="carousel-wrapper">
+        <div class="carousel-captions">Caption 1</div>
+            <div class="carousel-slider">
+                <ul>
+                    <li><img src="img/gallery/img1.png" alt="First Image"></li>
+                    <li><img src="img/gallery/img2.png" alt="Second Image"></li>
+                    <li><img src="img/gallery/img3.png" alt="Third Image"></li>
+                    <li><img src="img/gallery/img4.png" alt="Fourth Image"></li>
+                </ul>
+                <div class="carousel-arrows">
+                    <button id="left" data-arrows="left"><img src="img/leftArrow.png" alt="Left Arrow"></button>
+                    <button id="right" data-arrows="right" ><img src="img/rightArrow.png" alt="Right Arrow"></button>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
 	<br />
 	
 	<div class="stylishContainer">
@@ -102,6 +99,47 @@
 		</div>
 	<!-- Credit for calligraphy image -->
 		<a target="_blank" href="https://www.vecteezy.com">Design Credits: www.vecteezy.com</a>
+        <script>
+         $(document).ready(function($){
+             var carouselContainer = $('.carousel-slider ul');
+             var carouselWidth = $('.carousel-slider ul li').first().children('img').width();
+             var carouselSize = $('.carousel-slider ul').children('li').length;
+             var currentSlide = 1;
+              carouselContainer.css('width', carouselWidth*carouselSize);
+            $('.carousel-arrows button').on('click', function(){
+                var direction = $(this).data('arrows');
+                
+                if(direction === 'right'){
+                    if(currentSlide === carouselSize){
+                        currentSlide = 1;
+                        changeSlide(currentSlide, carouselWidth);
+                }else{
+                    currentSlide++;
+                    changeSlide(currentSlide, carouselWidth);
+                }
+                }else if(direction === 'left'){
+                    if(currentSlide === 1){
+                        currentSlide = carouselSize;
+                        changeSlide(currentSlide, carouselWidth);
+                    }else{
+                    currentSlide--;
+                 changeSlide(currentSlide, carouselWidth); 
+                  } 
+            }
+             
+            });
+             function changeSlide(changeSlides, changeWidth){
+                 var changeWidths = -(changeSlides-1) * changeWidth
+                 carouselContainer.animate({
+                     'left' : changeWidths
+                     
+                 });
+                
+             }
+             });
+            
+  
+    </script>
 	</body>
 	</html>
 <!-- Website Designed by Marcial A. 
