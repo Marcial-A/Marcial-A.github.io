@@ -17,8 +17,162 @@
 		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-		
+		</script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <style>
+    /* Prevents slides from flashing */
+    #slides {
+      display:none;
+    }
+#slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:3px;
+    }
+
+    #slides .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+    }
+
+    #slides .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(img/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+#slides {
+      display: none
+    }
+
+    .slideContainer {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      
+      .slideContainer {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .slideContainer {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .slideContainer {
+        width: auto
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .slideContainer {
+        width: 700px
+      }
+    }
+                #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(img/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+        </style>
 	</head>
 	<body>
 		<!-- Navbar start -->
@@ -31,7 +185,7 @@
 						<li role="presentation" ><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 						<li role="presentation" ><a href="about.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> About</a></li>
 						<li role="presentation" ><a href="contact.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
-						<li role="presentation" class="active"><a href="services.html"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Gallery</a></li>
+						<li role="presentation" class="active"><a href="gallery.html"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Gallery</a></li>
 					</ul>
 					</nav>
 				</div>
@@ -40,31 +194,21 @@
 		
 	<!-- Navbar end -->
 	<div id="services">
-		<div class="row">
-			<div class=".col-xs-6 .col-sm-4"><h2>Gallery</h2>
-		</div>
+		 <div class="row">
+          <div class="col-lg-12">
+              <h2 classid="gallery">Gallery</h2>
+           </div> 
+        </div>
 	</div>
-	</div>
-	
-	<div class="row">
-    <div class="col-md-12">
-	<div class="carousel-wrapper">
-        <div class="carousel-captions">Caption 1</div>
-            <div class="carousel-slider">
-                <ul>
-                    <li><img src="img/gallery/img1.png" alt="First Image"></li>
-                    <li><img src="img/gallery/img2.png" alt="Second Image"></li>
-                    <li><img src="img/gallery/img3.png" alt="Third Image"></li>
-                    <li><img src="img/gallery/img4.png" alt="Fourth Image"></li>
-                </ul>
-                <div class="carousel-arrows">
-                    <button id="left" data-arrows="left"><img src="img/leftArrow.png" alt="Left Arrow"></button>
-                    <button id="right" data-arrows="right" ><img src="img/rightArrow.png" alt="Right Arrow"></button>
-                </div>
+        <div class="slideContainer">
+            <div id="slides">
+                    <img class="slidesjs-slide" src="img/gallery/img1.png" alt="First Image">
+                    <img class="slidesjs-slide" src="img/gallery/img2.png" alt="Second Image">
+                    <img class="slidesjs-slide" src="img/gallery/img3.png" alt="Third Image">
+                    <img class="slidesjs-slide" src="img/gallery/img4.png" alt="Fourth Image">
+                    
             </div>
-    </div>
-    </div>
-    </div>
+        </div>
 	<br />
 	
 	<div class="stylishContainer">
@@ -99,47 +243,22 @@
 		</div>
 	<!-- Credit for calligraphy image -->
 		<a target="_blank" href="https://www.vecteezy.com">Design Credits: www.vecteezy.com</a>
+        <script src="js/jquery.slides.min.js"></script>
         <script>
-         $(document).ready(function($){
-             var carouselContainer = $('.carousel-slider ul');
-             var carouselWidth = $('.carousel-slider ul li').first().children('img').width();
-             var carouselSize = $('.carousel-slider ul').children('li').length;
-             var currentSlide = 1;
-              carouselContainer.css('width', carouselWidth*carouselSize);
-            $('.carousel-arrows button').on('click', function(){
-                var direction = $(this).data('arrows');
-                
-                if(direction === 'right'){
-                    if(currentSlide === carouselSize){
-                        currentSlide = 1;
-                        changeSlide(currentSlide, carouselWidth);
-                }else{
-                    currentSlide++;
-                    changeSlide(currentSlide, carouselWidth);
-                }
-                }else if(direction === 'left'){
-                    if(currentSlide === 1){
-                        currentSlide = carouselSize;
-                        changeSlide(currentSlide, carouselWidth);
-                    }else{
-                    currentSlide--;
-                 changeSlide(currentSlide, carouselWidth); 
-                  } 
-            }
-             
-            });
-             function changeSlide(changeSlides, changeWidth){
-                 var changeWidths = -(changeSlides-1) * changeWidth
-                 carouselContainer.animate({
-                     'left' : changeWidths
-                     
-                 });
-                
-             }
-             });
-            
-  
-    </script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 500,
+        height: 500,
+        play: {
+          active: true,
+          auto: true,
+          interval: 3000,
+          swap: true
+        }
+      });
+    });
+  </script>
+   
 	</body>
 	</html>
 <!-- Website Designed by Marcial A. 
@@ -191,4 +310,21 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+------------
+SlidesJS
+
+-----------
+Copyright 2013 Nathan Searles
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->

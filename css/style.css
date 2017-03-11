@@ -119,8 +119,6 @@ body {
 }
 .container {
 	overflow: hidden;
-
-
 	width: 100%;
 	height: auto;
 	background-size: cover;
@@ -128,10 +126,7 @@ body {
 	background-position: 30% 60%;
 	background-repeat: no-repeat;
 	opacity: 0.9;
-	
-	
 	font-size: large;
-
 	padding: 25px;
 }
 #message {
@@ -471,9 +466,7 @@ p {
 }
 #services h2 {
 	color: white;
-	position: absolute;
-	top: 65%;
-	right: 10%;
+
 	font-family: 'Cookie', cursive;
 	font-size: 50px;
 	border-radius: 5px;
@@ -531,56 +524,12 @@ p {
 .ee {
 	margin-right: 10px;
 }
-.carousel-wrapper{
-    
-    margin: auto;
-    max-width: 100%;
-}
-.carousel-captions{
-    text-align: center;
-    position: absolute;
-    z-index: 1;
-    bottom: 290px;
-    left: 0px;
-    right: 0px;
-    font-size: 200%;
-}
-.carousel-slider{
-    max-width: 100%;
-    overflow: hidden;
-    
-}
-.carousel-slider ul{
-    max-width: 100%;
-    left: 0px;
-   list-style: none;
-    position: relative;
-    margin: 0;
-    padding: 0;
+
+.slideContainer {
+    padding: 15px;
 }
 
-.carousel-slider ul li{
-    float: left;
-    margin-top: 25px;
-
-}
-.carousel-slider ul li img {
-	max-width: 100%;
-	margin-left: 20px;
-
-}
-
-.carousel-arrows #left{
-    position: relative;
-    float: left;
-    bottom: 290px;
-}
-.carousel-arrows #right{
-    position: relative;
-    float: right;
-    bottom: 290px;
-}
-#left, #right {
-    border: none;
+#slides img {
+  width:100%;
     
 }
